@@ -1,13 +1,20 @@
 # Periodic Table Database
 
-Этот проект представляет собой базу данных и скрипт для управления информацией о химических элементах. Он был создан в рамках сертификации "Relational Database" от freeCodeCamp.
+This project is a relational database and a bash-based CLI tool designed to manage and query information about chemical elements. It was developed as part of the "Relational Database" certification curriculum at freeCodeCamp.
 
-## Особенности проекта
-* **База данных:** PostgreSQL-база (`periodic_table`), содержащая данные об элементах: атомная масса, температуры плавления и кипения, типы элементов.
-* **Скрипт:** Bash-скрипт (`element.sh`), который позволяет выполнять поиск по базе данных, используя атомный номер, символ или название элемента.
+## Project Overview
+The project involves:
+- **Database Normalization:** Fixing existing database structures, adding constraints, and creating relationships between tables.
+- **Data Management:** Populating the database with specific chemical element data and ensuring data integrity.
+- **Scripting:** Creating a bash script (`element.sh`) that provides a user-friendly interface to search for element details.
+- **Version Control:** Managing the project development using Git with structured commit messages.
 
-## Как использовать
-1. Убедитесь, что у вас установлена `psql` и есть доступ к PostgreSQL.
-2. Восстановите базу данных из файла дампа:
+## Features
+- Search for elements by **atomic number**, **symbol**, or **name**.
+- Returns comprehensive details: atomic number, name, symbol, type, atomic mass, melting point, and boiling point.
+- Handles non-existent entries with a user-friendly error message.
+
+## Usage
+1. **Restore the database:**
    ```bash
    psql -U postgres < periodic_table.sql
